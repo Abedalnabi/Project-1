@@ -1,0 +1,54 @@
+    body{
+        background-image: url("https://previews.123rf.com/images/me67kz/me67kz1701/me67kz170100156/71982359-old-dirty-paper-background-paper-texture-for-design-.jpg");
+    }
+    .firstLineTop{
+        display: flex;
+        /* text-align: center; */
+        justify-content: center;
+    }
+    .firstLine{
+        display: flex;
+        margin-top: 15px;
+        width: 70%;
+        height: 20px;
+        border: 3px double   black;
+        justify-content: center;
+        text-align: center;
+        margin-top: 15px;
+
+    }
+    #QA1{
+          /* Change font style */
+        position: relative;
+        text-align: center;
+        font-size: large;
+        bottom: 20px;      
+    }
+/* ---------------------------------------------------------------------- */
+    .wholeBox{
+        display: flex;
+        margin-top: 30px;
+        width: 70%;
+        height: 500px ;
+        border: 3px double   black;
+        justify-content: center;
+        text-align: center;
+        margin-left: 14.5%;
+    }
+    .midBox{
+        position :relative;
+        width: 700px;
+        height: 286px;
+        border: 10px double black;
+        top: 50px;
+        left: 28px;
+        
+    }
+    #QA{
+        border-bottom: 3px solid black;
+        margin-block-end: 6%;
+        font-size: 40px;
+    }p{
+        font-size: 26px;
+    }
+    
