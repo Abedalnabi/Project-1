@@ -3,7 +3,7 @@
 
 }
 body{
-    background-image: url("https://previews.123rf.com/images/me67kz/me67kz1701/me67kz170100156/71982359-old-dirty-paper-background-paper-texture-for-design-.jpg");
+    background-image: url(https://www.sciencemag.org/sites/default/files/styles/article_main_large/public/eso_1280p.jpg?itok=JRNCv2y0);
 
 }
 
@@ -21,41 +21,46 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-
     width: 70%;
     height: 25px;
     /* border-style: ; */
-    border: 2px inset  black;
+    border: 2px inset  rgb(255, 0, 0);
 }
 #BOX{
         margin-top: 70px;
         display: flex;
         flex-direction: column;
-        border: 2px inset  black;
+        border: 2px inset  rgb(250, 0, 0);
         align-items: center;
         height: 450px;
         margin: 63px;
         margin-left: 287px;
         margin-right: 287px;
-
+        background-color: rgb(20, 36, 31);
+        background-image: url( https://d2r55xnwy6nx47.cloudfront.net/uploads/2021/02/Blackhole_statistics_2880x1620_Lede.jpg)
 }
+
 .wholeBox{
     margin-top:30px ;
     display:flex ;
     flex-direction: column;
-    border: 2px inset  black;
+    border: 2px inset  rgb(28, 141, 84);
     align-items: center;
     width: 92%;
     height: 60%;
+    background-image: url();
+
+    
 }
 #QA{
     margin-top: 20px;
     margin-bottom: 20px;
+    color: wheat;
 }
 .questionBox{
     width: 55%;
     padding: 23px;
-    border-top: 2px inset  black;
+    border-top: 2px inset  rgb(28, 141, 84);
     text-align: center;
 }
 
@@ -79,15 +84,15 @@ button {
   text-decoration: none;
   outline: none;
   color: #fff;
-  background-color: #4CAF50;
+  background-color: rgb(61 100 174 / 70%);;
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
 }
-button:hover {background-color: #3e8e41}
+button:hover {background-color: #ff0000}
 
 button:active {
-  background-color: #3e8e41;
+  background-color: #0026fd;
   box-shadow:  5px #666;
   transform: translateY(4px);
 }
@@ -115,7 +120,9 @@ button:active {
 }
 .Questions{
     font-size: 36px;
+    color: wheat;
 }
+
 
 
 
@@ -128,7 +135,7 @@ button:active {
     color: #fff;
     text-shadow: 1px 1px 1px #000;
     border-radius: 10px;
-    background-color: rgb(70, 220, 0);
+    background-color: rgb(61 100 174 / 70%);
     background-image: linear-gradient(to top left,
                             rgba(0, 0, 0, .2),
                             rgba(0, 0, 0, .2) 30%,
@@ -144,6 +151,10 @@ button:active {
 .answer:active {
     box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
                 inset 2px 2px 3px rgba(0, 0, 0, .6);
+    background-color: rgb(0, 4, 255);
+
+
+}
 
 
 
@@ -157,6 +168,11 @@ button:active {
 
 
 
+
+
+
+
+                
 /*     
     body{
         background: wheat;
@@ -179,7 +195,7 @@ button:active {
 
     }
     #QA1{
-          Change font style
+        Change font style
         position: relative;
         text-align: center;
         font-size: large;

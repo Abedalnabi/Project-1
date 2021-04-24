@@ -2,13 +2,16 @@ console.log("*********Project-1**********")
 
 const body = document.querySelector("body")
 
-let Q1,Q2,Q3,Q4,Q5,questions,options,correctAnswers,score
-scour=0
+let Q1,Q2,Q3,Q4,Q5,questions,options,correctAnswers,score,rank
+scour=[]
+rank=0
 
-Q1="Which of the following is not a Capital?"
-Q2="What year did World War ONE begin"
-Q3="What is the unit of currency in Jordan"
-Q4=" what year did the berlin wall crash"
+
+
+Q1=`Which of the following is not a Capital?`
+Q2=`What year did World War ONE begin?`
+Q3=`What is the unit of currency in Jordan?`
+Q4=` What year did the berlin wall crash?`
 
 
 questions = [{Q: Q1},{Q: Q2},{Q: Q3},{Q: Q4}]
@@ -19,14 +22,14 @@ options = [{OP4Q1:"Amman" , OP4Q2:2020,OP4Q3:"euro",OP4Q4:1988},
 correctAnswers =["USA",1918,"JOD","1989"]
 
 
-let QA      = document.querySelector(".Questions")
-let answers = document.querySelectorAll(".answer")
-let a=0
+let QA      = document.querySelector(`.Questions`)
+let answers = document.querySelectorAll(`.answer`)
+let counter=0
 let i =0
 let rest
 
 
-function start(){
+const start=  ()=>{
     document.getElementById("qwe").value = options[0].OP4Q1
     document.getElementById("SECOND").value = options[1].OP4Q1
     document.getElementById("THIRD").value = options[2].OP4Q1
@@ -35,71 +38,221 @@ function start(){
     QA.innerHTML =questions[0].Q
     rest = document.querySelector(".next")
     rest.innerHTML = "Rest"
-    
-    scour=0
-    a=0
+    rank=0
+    scour=[]
+    counter=0
     i=0
-    if(a===0){
-        // options.forEach(function(ele,i){
-            answers[i].innerHTML = options[i].OP4Q1
-            body.style.backgroundImage = "url(https://cdn.britannica.com/55/190455-050-E617F64E/Night-view-Singapore.jpg)";
-            body.style.color = "white"
-
-        // })
-    }
-    a++
+        if(counter===0){
+        answers[i].innerHTML = options[i].OP4Q1
+        }
+    counter++
     i++
     }
 
+    const next = ()=>{
 
+        scour.push (document.getElementById(`qwe`).value)
 
+        if(counter>0&&counter<=3){
+            
+            QA.innerHTML =questions[i].Q
 
-function next(){
+                if(counter===0){
 
-    console.log(a)
-    if(a>0&&a<=3){
+                }else if (counter===1){
+                    document.getElementById(`qwe`).value = options[0].OP4Q2
+                    document.getElementById(`SECOND`).value = options[1].OP4Q2
+                    document.getElementById(`THIRD`).value = options[2].OP4Q2
+                    document.getElementById(`FORTH`).value = options[3].OP4Q2
+
+                }else if (counter===2){
+                    document.getElementById("qwe").value = options[0].OP4Q3
+                    document.getElementById("SECOND").value = options[1].OP4Q3
+                    document.getElementById("THIRD").value = options[2].OP4Q3
+                    document.getElementById("FORTH").value = options[3].OP4Q3
+
+                }else if (counter===3){
+                    document.getElementById("qwe").value = options[0].OP4Q4
+                    document.getElementById("SECOND").value = options[1].OP4Q4
+                    document.getElementById("THIRD").value = options[2].OP4Q4
+                    document.getElementById("FORTH").value = options[3].OP4Q4
+
+                }else if(counter>3){
+                    i=0
+                    }
+                    i++
+        }
+        if(counter===4){
+            yourRecord()
+            QA.innerHTML = `Your record in this game is ${rank} / 4 you can play again             `
+
+        }
+        if(counter>0){
+            counter++
+        }
+    }
+
+const next1 = ()=>{
+
+    scour.push (document.getElementById("SECOND").value)
+    
+    console.log(counter)
+    if(counter>0&&counter<=3){
         
         QA.innerHTML =questions[i].Q
-        console.log(a)
-            if(a===0){
-// options.forEach(function(ele,i){
-// answers[i].innerHTML = options[i].OP4Q1
+
+            if(counter===0){
+
                 body.style.backgroundImage = "url(https://cdn.britannica.com/55/190455-050-E617F64E/Night-view-Singapore.jpg)";
-// })
-            }else if (a===1){
-// options.forEach(function(ele,i){
+
+            }else if (counter===1){
+
                 document.getElementById("qwe").value = options[0].OP4Q2
                 document.getElementById("SECOND").value = options[1].OP4Q2
                 document.getElementById("THIRD").value = options[2].OP4Q2
                 document.getElementById("FORTH").value = options[3].OP4Q2
-// answers[i].innerHTML = options[i].OP4Q2 
-   
-// })
-            }else if (a===2){
+                checkBox = document.getElementById('qwe').checked;
+                console.log(checkBox)
+
+            }else if (counter===2){
+                document.getElementById("qwe").value = options[0].OP4Q3
+                document.getElementById("SECOND").value = options[1].OP4Q3
+                document.getElementById("THIRD").value = options[2].OP4Q3
+                document.getElementById("FORTH").value = options[3].OP4Q3
+
+            }else if (counter===3){
+                document.getElementById("qwe").value = options[0].OP4Q4
+                document.getElementById("SECOND").value = options[1].OP4Q4
+                document.getElementById("THIRD").value = options[2].OP4Q4
+                document.getElementById("FORTH").value = options[3].OP4Q4
+
+            }else if(counter>3){
+                i=0
+                }
+                
+                
+                i++
+    }
+    if(counter===4){
+        yourRecord()
+        QA.innerHTML = `Your record in this game is ${rank} / 4 you can play again             `
+
+    }
+    if(counter>0){
+        counter++}
+}
+
+const next2 = ()=>{
+
+    scour.push (document.getElementById("THIRD").value)
+    
+    console.log(counter)
+    if(counter>0&&counter<=3){
+        
+        QA.innerHTML =questions[i].Q
+        console.log(counter)
+            if(counter===0){
+
+                body.style.backgroundImage = "url(https://cdn.britannica.com/55/190455-050-E617F64E/Night-view-Singapore.jpg)";
+
+            }else if (counter===1){
+
+                document.getElementById("qwe").value = options[0].OP4Q2
+                document.getElementById("SECOND").value = options[1].OP4Q2
+                document.getElementById("THIRD").value = options[2].OP4Q2
+                document.getElementById("FORTH").value = options[3].OP4Q2
+                checkBox = document.getElementById('qwe').checked;
+
+            }else if (counter===2){
     
                 document.getElementById("qwe").value = options[0].OP4Q3
                 document.getElementById("SECOND").value = options[1].OP4Q3
                 document.getElementById("THIRD").value = options[2].OP4Q3
                 document.getElementById("FORTH").value = options[3].OP4Q3
-//options.forEach(function(ele,i){
-//answers[i].innerHTML = options[i].OP4Q3 
-// })
-            }else if (a===3){
+
+            }else if (counter===3){
                 document.getElementById("qwe").value = options[0].OP4Q4
                 document.getElementById("SECOND").value = options[1].OP4Q4
                 document.getElementById("THIRD").value = options[2].OP4Q4
                 document.getElementById("FORTH").value = options[3].OP4Q4
-// options.forEach(function(ele,i){
-// answers[i].innerHTML = options[i].OP4Q4   
-// })
-            }else if(a>3){
+
+            }else if(counter>3){
                 i=0
                 }
-                
-                a++
-                i++
+        i++
+    }
+    if(counter===4){
+        yourRecord()
+        QA.innerHTML = `Your record in this game is ${rank} / 4 you can play again             `
+    }
+    if(counter>0){
+        counter++
     }
 }
 
+const next3 = ()=>{
+
+    scour.push (document.getElementById("FORTH").value)
+
+    console.log(counter)
+    if(counter>0&&counter<=3){
+
+        QA.innerHTML =questions[i].Q
+
+            if(counter===0){
+
+                body.style.backgroundImage = "url(https://cdn.britannica.com/55/190455-050-E617F64E/Night-view-Singapore.jpg)";
+
+            }else if (counter===1){
+
+                document.getElementById("qwe").value = options[0].OP4Q2
+                document.getElementById("SECOND").value = options[1].OP4Q2
+                document.getElementById("THIRD").value = options[2].OP4Q2
+                document.getElementById("FORTH").value = options[3].OP4Q2
+                checkBox = document.getElementById('qwe').checked;
+
+            }else if (counter===2){
+
+                document.getElementById("qwe").value = options[0].OP4Q3
+                document.getElementById("SECOND").value = options[1].OP4Q3
+                document.getElementById("THIRD").value = options[2].OP4Q3
+                document.getElementById("FORTH").value = options[3].OP4Q3
+
+            }else if (counter===3){
+                document.getElementById("qwe").value = options[0].OP4Q4
+                document.getElementById("SECOND").value = options[1].OP4Q4
+                document.getElementById("THIRD").value = options[2].OP4Q4
+                document.getElementById("FORTH").value = options[3].OP4Q4
+
+            }else if(counter>3){
+                i=0
+            }    
+        i++
+    }
+
+    if(counter===4){
+        yourRecord()
+        QA.innerHTML = `Your record in this game is ${rank} / 4 you can play again             `
+
+    }
+    if(counter>0){
+        counter++
+    }
+}
+
+
+
+///////////////////////////////////////////////////////////////////////
+    const yourRecord = ()=>{
+    
+        correctAnswers =["USA",1918,"JOD","1989"]
+        correctAnswers.forEach(function(ele,i){
+            if(scour.includes(ele)){
+            rank++
+        }
+
+    })}
+
+    
 
 
