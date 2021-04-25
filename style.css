@@ -27,17 +27,17 @@ body{
     border: 2px inset  rgb(255, 0, 0);
 }
 #BOX{
-        margin-top: 70px;
-        display: flex;
-        flex-direction: column;
-        border: 2px inset  rgb(250, 0, 0);
-        align-items: center;
-        height: 450px;
-        margin: 63px;
-        margin-left: 287px;
-        margin-right: 287px;
-        background-color: rgb(20, 36, 31);
-        background-image: url( https://d2r55xnwy6nx47.cloudfront.net/uploads/2021/02/Blackhole_statistics_2880x1620_Lede.jpg)
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    border: 2px inset  rgb(250, 0, 0);
+    align-items: center;
+    height: 450px;
+    margin: 63px;
+    margin-left: 287px;
+    margin-right: 287px;
+    background-color: rgb(20, 36, 31);
+    background-image: url( https://d2r55xnwy6nx47.cloudfront.net/uploads/2021/02/Blackhole_statistics_2880x1620_Lede.jpg)
 }
 
 .wholeBox{
@@ -50,12 +50,15 @@ body{
     height: 60%;
     background-image: url();
 
-    
+}
+#QA1{
+    font-style: italic;
 }
 #QA{
     margin-top: 20px;
     margin-bottom: 20px;
     color: wheat;
+    
 }
 .questionBox{
     width: 55%;
@@ -66,8 +69,8 @@ body{
 
 .fouansers{
     display: flex;
-      /* grid-template-rows: 100px 200px; */
-      align-items: center;
+    /* grid-template-rows: 100px 200px; */
+    align-items: center;
     justify-content: center;
     width: 90% ;
     height: 35%;
@@ -77,24 +80,23 @@ body{
 }
 button {
     display: inline-block;
- 
-  font-size: 24px;
-  cursor: pointer;
-  /* text-align: center; */
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: rgb(61 100 174 / 70%);;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
+    font-size: 24px;
+    cursor: pointer;
+    /* text-align: center; */
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: rgb(61 100 174 / 70%);;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
 }
 button:hover {background-color: #ff0000}
 
 button:active {
-  background-color: #0026fd;
-  box-shadow:  5px #666;
-  transform: translateY(4px);
+    background-color: #0026fd;
+    box-shadow:  5px #666;
+    transform: translateY(4px);
 }
 
 .button {
@@ -102,9 +104,6 @@ button:active {
     margin-left: 20px;
     width: 95%;
     grid-template-columns: 1fr 1fr ;
-    /* justify-content: space-around; */
-    /* align-items: center; */
-
     row-gap: 25px; 
     column-gap: 25px;
 }
@@ -112,15 +111,16 @@ button:active {
     display: flex;
     justify-content: center;
     margin: -40px;
-
 }
 #next{
     margin-bottom: -37px;
+    color:rgb(255, 0, 0);
 
 }
 .Questions{
     font-size: 36px;
     color: wheat;
+    
 }
 
 
@@ -132,7 +132,7 @@ button:active {
     padding: 0 20px;
     font-size: 1rem;
     text-align: center;
-    color: #fff;
+    color:wheat;
     text-shadow: 1px 1px 1px #000;
     border-radius: 10px;
     background-color: rgb(61 100 174 / 70%);
@@ -168,85 +168,4 @@ button:active {
 
 
 
-
-
-
-
-                
-/*     
-    body{
-        background: wheat;
-        background-image: url("https://previews.123rf.com/images/me67kz/me67kz1701/me67kz170100156/71982359-old-dirty-paper-background-paper-texture-for-design-.jpg");
-    }
-    .firstLineTop{
-        display: flex;
-        text-align: center;
-        justify-content: center;
-    }
-    .firstLine{
-        display: flex;
-        margin-top: 15px;
-        width: 70%;
-        height: 20px;
-        border: 3px double   black;
-        justify-content: center;
-        text-align: center;
-        margin-top: 15px;
-
-    }
-    #QA1{
-        Change font style
-        position: relative;
-        text-align: center;
-        font-size: large;
-        bottom: 20px;      
-    } */
-/* ---------------------------------------------------------------------- */
-    /* .wholeBox{
-        display: flex;
-        margin-top: 30px;
-        width: 70%;
-        height: 500px ;
-        border: 3px double   black;
-        justify-content: center;
-        text-align: center;
-        margin-left: 14.5%;
-    }
-    .midBox{
-        position :relative;
-        width: 700px;
-        height: 286px;
-        border: 10px double black;
-        top: 50px;
-        left: 28px;
-        
-    }
-    #QA{
-        border-bottom: 3px solid black;
-        margin-block-end: 6%;
-        font-size: 40px;
-    }p{
-        font-size: 26px;
-    }
-    .button {
-        display: inline-block;
-        padding: 15px 25px;
-        font-size: 24px;
-        cursor: pointer;
-        text-align: center;
-        text-decoration: none;
-        outline: none;
-        color: #fff;
-        background-color: #4CAF50;
-        border: none;
-        border-radius: 15px;
-        box-shadow: 0 9px #999;
-      }
-      .button:hover {background-color: #3e8e41}
-      .button:active {
-        background-color: #3e8e41;
-        box-shadow: 0 5px #666;
-        transform: translateY(4px);
-      }
- */
 

@@ -24,16 +24,23 @@ correctAnswers =["USA",1918,"JOD","1989"]
 
 let QA      = document.querySelector(`.Questions`)
 let answers = document.querySelectorAll(`.answer`)
+//counter to know where i am
 let counter=0
+// i to know where the array i am like answer array
 let i =0
 let rest
-
-
+let QustConter =1
+let redyToQustConter = false
+//this fun for start and rest
 const start=  ()=>{
     document.getElementById("qwe").value = options[0].OP4Q1
     document.getElementById("SECOND").value = options[1].OP4Q1
     document.getElementById("THIRD").value = options[2].OP4Q1
     document.getElementById("FORTH").value = options[3].OP4Q1
+        redyToQustConter = true
+        QustConter =1
+        QustNumber = document.querySelector("#QA")
+        QustNumber.innerHTML = `Questions 1`
 
     QA.innerHTML =questions[0].Q
     rest = document.querySelector(".next")
@@ -50,12 +57,17 @@ const start=  ()=>{
     }
 
     const next = ()=>{
-
+        if(QustConter<4&&redyToQustConter){
+        QustConter++
+        QustNumber = document.querySelector("#QA")
+        QustNumber.innerHTML = `Questions ${QustConter}`
+        }
         scour.push (document.getElementById(`qwe`).value)
 
         if(counter>0&&counter<=3){
             
             QA.innerHTML =questions[i].Q
+        
 
                 if(counter===0){
 
@@ -64,6 +76,7 @@ const start=  ()=>{
                     document.getElementById(`SECOND`).value = options[1].OP4Q2
                     document.getElementById(`THIRD`).value = options[2].OP4Q2
                     document.getElementById(`FORTH`).value = options[3].OP4Q2
+                    
 
                 }else if (counter===2){
                     document.getElementById("qwe").value = options[0].OP4Q3
@@ -93,6 +106,11 @@ const start=  ()=>{
     }
 
 const next1 = ()=>{
+    if(QustConter<4&&redyToQustConter){
+        QustConter++
+        QustNumber = document.querySelector("#QA")
+        QustNumber.innerHTML = `Questions ${QustConter}`
+    }
 
     scour.push (document.getElementById("SECOND").value)
     
@@ -143,6 +161,11 @@ const next1 = ()=>{
 }
 
 const next2 = ()=>{
+    if(QustConter<4&&redyToQustConter){
+        QustConter++
+        QustNumber = document.querySelector("#QA")
+        QustNumber.innerHTML = `Questions ${QustConter}`
+    }
 
     scour.push (document.getElementById("THIRD").value)
     
@@ -191,6 +214,11 @@ const next2 = ()=>{
 }
 
 const next3 = ()=>{
+    if(QustConter<4&&redyToQustConter){
+        QustConter++
+        QustNumber = document.querySelector("#QA")
+        QustNumber.innerHTML = `Questions ${QustConter}`
+    }
 
     scour.push (document.getElementById("FORTH").value)
 

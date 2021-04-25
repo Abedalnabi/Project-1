@@ -7,8 +7,11 @@
     font-style: oblique;
 
 }
+.next{
+    color: red;
+}
 body{
-    background-image: url(Quize.png);
+    background-image: url(17493.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -19,7 +22,7 @@ body{
 
 } 
 h1{
-   padding: 1px;
+padding: 1px;
     margin: 50px;
     font-weight: bold;
 
@@ -58,7 +61,7 @@ button  {
     transition-duration: 0.4s;
     cursor: pointer;
     
-  }
+}
 button {
     background-color: black;
     color: white;
