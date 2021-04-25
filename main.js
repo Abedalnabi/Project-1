@@ -6,7 +6,7 @@ let Q1,Q2,Q3,Q4,Q5,questions,options,correctAnswers,score,rank
 scour=[]
 rank=0
 
-
+const page=document.createElement("p");
 
 Q1=`Which of the following is not a Capital?`
 Q2=`What year did World War ONE begin?`
@@ -32,6 +32,17 @@ let rest
 let QustConter =1
 let redyToQustConter = false
 //this fun for start and rest
+
+const timeOut =  () =>{
+window.setTimeout(function(){
+
+    window.location.href = "file:///C:/A26/Project-1/score.html";
+
+}, 5000);}
+
+
+
+
 const start=  ()=>{
     document.getElementById("qwe").value = options[0].OP4Q1
     document.getElementById("SECOND").value = options[1].OP4Q1
@@ -96,6 +107,7 @@ const start=  ()=>{
                     i++
         }
         if(counter===4){
+            timeOut()
             yourRecord()
             QA.innerHTML = `Your record in this game is ${rank} / 4 you can play again             `
 
@@ -114,7 +126,6 @@ const next1 = ()=>{
 
     scour.push (document.getElementById("SECOND").value)
     
-    console.log(counter)
     if(counter>0&&counter<=3){
         
         QA.innerHTML =questions[i].Q
@@ -130,7 +141,6 @@ const next1 = ()=>{
                 document.getElementById("THIRD").value = options[2].OP4Q2
                 document.getElementById("FORTH").value = options[3].OP4Q2
                 checkBox = document.getElementById('qwe').checked;
-                console.log(checkBox)
 
             }else if (counter===2){
                 document.getElementById("qwe").value = options[0].OP4Q3
@@ -143,6 +153,7 @@ const next1 = ()=>{
                 document.getElementById("SECOND").value = options[1].OP4Q4
                 document.getElementById("THIRD").value = options[2].OP4Q4
                 document.getElementById("FORTH").value = options[3].OP4Q4
+                
 
             }else if(counter>3){
                 i=0
@@ -152,6 +163,7 @@ const next1 = ()=>{
                 i++
     }
     if(counter===4){
+        timeOut()
         yourRecord()
         QA.innerHTML = `Your record in this game is ${rank} / 4 you can play again             `
 
@@ -169,11 +181,9 @@ const next2 = ()=>{
 
     scour.push (document.getElementById("THIRD").value)
     
-    console.log(counter)
     if(counter>0&&counter<=3){
         
         QA.innerHTML =questions[i].Q
-        console.log(counter)
             if(counter===0){
 
                 body.style.backgroundImage = "url(https://cdn.britannica.com/55/190455-050-E617F64E/Night-view-Singapore.jpg)";
@@ -205,6 +215,7 @@ const next2 = ()=>{
         i++
     }
     if(counter===4){
+        timeOut()
         yourRecord()
         QA.innerHTML = `Your record in this game is ${rank} / 4 you can play again             `
     }
@@ -222,7 +233,6 @@ const next3 = ()=>{
 
     scour.push (document.getElementById("FORTH").value)
 
-    console.log(counter)
     if(counter>0&&counter<=3){
 
         QA.innerHTML =questions[i].Q
@@ -259,16 +269,14 @@ const next3 = ()=>{
     }
 
     if(counter===4){
+        timeOut()
         yourRecord()
         QA.innerHTML = `Your record in this game is ${rank} / 4 you can play again             `
-
     }
     if(counter>0){
         counter++
     }
 }
-
-
 
 ///////////////////////////////////////////////////////////////////////
     const yourRecord = ()=>{
@@ -280,7 +288,3 @@ const next3 = ()=>{
         }
 
     })}
-
-    
-
-
